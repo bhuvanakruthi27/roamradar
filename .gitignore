@@ -1,0 +1,19 @@
+# Node modules (do not push to GitHub)
+node_modules/
+
+# Environment variables (keep secrets safe)
+.env
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code settings (optional)
+.vscode/
+
+# Build files (if using React frontend later)
+dist/
+build/
