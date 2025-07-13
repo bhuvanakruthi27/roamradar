@@ -2,7 +2,7 @@
 
 ![Status](https://img.shields.io/badge/Status-Backend%20Completed-green)
 
-Wanderlust is a full-stack travel application where users can explore destinations, create listings, and leave reviews. It’s built using the MERN stack with a focus on clean backend structure and real-world functionality. The backend is complete, and a React-based frontend is under development.
+Roamrador is a full-stack travel application where users can explore destinations, create listings, and leave reviews. It’s built using the MERN stack with a focus on clean backend structure and real-world functionality. The backend is complete, and a React-based frontend is under development.
 
 ---
 
@@ -32,8 +32,8 @@ Wanderlust is a full-stack travel application where users can explore destinatio
 ###  Installation
 
 ```bash
-git clone https://github.com/bhuvanakruthi27/wanderlust-mern-bhuvana.git
-cd wanderlust-mern-bhuvana
+git clone https://github.com/bhuvanakruthi27/roamrador.git
+cd roamrador-mern-bhuvana
 npm install
 ```
 
@@ -59,7 +59,7 @@ SESSION_SECRET=your_session_secret
 
 ##  Folder Structure
 ```bash
-wanderlust-mern-bhuvana/
+roamrador/
 ├── assets/    # Screenshots used in README
 │   ├── allListings.png
 │   ├── createListing.png
