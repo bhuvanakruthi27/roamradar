@@ -1,53 +1,63 @@
 #  Wanderlust – Full-Stack Travel Web App
 
+![Status](https://img.shields.io/badge/Status-Backend%20Completed-green)
+
 Wanderlust is a full-stack travel application where users can explore destinations, create listings, and leave reviews. It’s built using the MERN stack with a focus on clean backend structure and real-world functionality. The backend is complete, and a React-based frontend is under development.
+
+---
 
 ##  Tech Stack
 
-- **Backend:** Node.js, Express.js
-- **Database:** MongoDB, Mongoose
-- **Frontend:** EJS (React in progress)
-- **Authentication:** Passport.js
-- **Templating:** EJS
+- **Backend:** Node.js, Express.js  
+- **Database:** MongoDB, Mongoose  
+- **Frontend:** EJS (React in progress)  
+- **Authentication:** Passport.js  
+- **Templating:** EJS  
 - **Session Management:** express-session, connect-flash
 
+---
 
-## Features
+##  Features
 
-- User authentication (register/login/logout)
-- Add, edit, and delete travel destinations
-- Post and manage reviews
-- Flash messages for user actions
+- User authentication (register/login/logout)  
+- Add, edit, and delete travel destinations  
+- Post and manage reviews  
+- Flash messages for user actions  
 - MVC folder structure for scalability
 
+---
 
 ##  Getting Started
 
-## Installation
+###  Installation
 
 ```bash
 git clone https://github.com/bhuvanakruthi27/wanderlust-mern-bhuvana.git
 cd wanderlust-mern-bhuvana
 npm install
+```
+
+###  Run the Application
+
+Start your server:
+```bash
+node app.js
+```
+Open your browser and visit:
+[http://localhost:8080](http://localhost:8080)
 
 
-## Run the Application
+##  Setup Environment Variables
 
--Start your server:
-    node app.js
--Open your browser and visit:
-    http://localhost:8080
-
-
-## Setup Environment Variables
-
--Create a .env file in the root directory of the project and add the following environment variables:
-    MONGO_URL=your_mongodb_connection_string
-    SESSION_SECRET=your_session_secret
--Replace the placeholder values with your actual MongoDB URI and a random session secret key.
+- Create a .env file in the root directory of the project and add the following environment variables:
+```bash
+MONGO_URL=your_mongodb_connection_string
+SESSION_SECRET=your_session_secret
+```
+- Replace the placeholder values with your actual MongoDB URI and a random session secret key.
 
 
- ##Folder Structure
+##  Folder Structure
 
 wanderlust-mern-bhuvana/
 ├── assets/    # Screenshots used in README
@@ -120,3 +130,16 @@ wanderlust-mern-bhuvana/
 
 ###  Show Listing Details
 ![Show Listing](./assets/showListing.png)
+
+
+##  Future Enhancements
+
+- Build the React frontend (in progress)
+- Add user profile dashboard
+- Make it responsive for mobile
+- Add dark/light mode
+- Improve performance and accessibility
+
+## Developed By
+
+[![GitHub](https://img.shields.io/badge/GitHub-bhuvanakruthi27-181717?style=flat&logo=github)](https://github.com/bhuvanakruthi27)
