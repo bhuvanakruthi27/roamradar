@@ -58,7 +58,7 @@ SESSION_SECRET=your_session_secret
 
 
 ##  Folder Structure
-
+```bash
 wanderlust-mern-bhuvana/
 ├── assets/    # Screenshots used in README
 │   ├── allListings.png
@@ -109,6 +109,7 @@ wanderlust-mern-bhuvana/
 ├── package-lock.json
 ├── README.md
 └── schema.js     # Joi validation schema
+```
 
 
 ##  Screenshots
