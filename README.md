@@ -1,4 +1,4 @@
-#  Wanderlust – Full-Stack Travel Web App
+# RoamRador – Full Stack Travel Web App
 
 ![Status](https://img.shields.io/badge/Status-Backend%20Completed-green)
 
