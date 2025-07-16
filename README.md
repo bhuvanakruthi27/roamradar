@@ -1,8 +1,8 @@
-# RoamRador – Full Stack Travel Web App
+# RoamRadar – Full Stack Travel Web App
 
 ![Status](https://img.shields.io/badge/Status-Backend%20Completed-green)
 
-Roamrador is a full-stack travel application where users can explore destinations, create listings, and leave reviews. It’s built using the MERN stack with a focus on clean backend structure and real-world functionality. The backend is complete, and a React-based frontend is under development.
+Roamradar is a full-stack travel application where users can explore destinations, create listings, and leave reviews. It’s built using the MERN stack with a focus on clean backend structure and real-world functionality. The backend is complete, and a React-based frontend is under development.
 
 ---
 
@@ -32,7 +32,7 @@ Roamrador is a full-stack travel application where users can explore destination
 ###  Installation
 
 ```bash
-git clone https://github.com/bhuvanakruthi27/roamrador.git
+git clone https://github.com/bhuvanakruthi27/roamradar.git
 cd roamrador-mern-bhuvana
 npm install
 ```
@@ -59,7 +59,7 @@ SESSION_SECRET=your_session_secret
 
 ##  Folder Structure
 ```bash
-roamrador/
+roamradar/
 ├── assets/    # Screenshots used in README
 │   ├── allListings.png
 │   ├── createListing.png
