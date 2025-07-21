@@ -17,10 +17,14 @@ router
         upload.single("listing[image]"),
         validateListing,
         wrapAsync(listingController.createListing)
-    );
+    )
+
 
 //new route
 router.get("/new",isLoggedIn,listingController.newRenderForm);
+
+// Category Filter (must be before /:id)
+router.get("/category/:category", wrapAsync(listingController.category));
 
 router.route("/:id")
     //show route
@@ -42,8 +46,9 @@ router.route("/:id")
 router.get("/:id/edit",
     isLoggedIn,
     isOwner,
-    wrapAsync(listingController.editListing)
+    wrapAsync(listingController.renderEditForm)
 );
 
+//filters
 
 module.exports=router;

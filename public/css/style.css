@@ -101,3 +101,17 @@ body{
     display: flex;
    
 }
+
+/* edit image display */
+.resized-img {
+  max-width: 250px;
+  height: auto;
+}
+
+#map{
+     height: 400px;
+    width: 100%;   /* Full width of parent */
+    border-radius: 10px;  
+}
+
+

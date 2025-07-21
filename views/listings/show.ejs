@@ -1,5 +1,8 @@
 <% layout('layouts/boilerplate') %>
-<body>
+    <script>
+        const mapToken="<%=mapToken%>";
+        const listing= <%- JSON.stringify(listing) %>; // [lng, lat]
+    </script>
     <div class="row mt-3">
         <div class="col-8 offset-3">
             <h3><%=listing.title %></h3>
@@ -61,11 +64,12 @@
                 </div>
                 <button class="btn btn-outline-dark ">Submit</button>
             </form>
+            
         <% } %>
         </div>
 
         
-
+        <%if(listing.reviews.length>0){%>
         <div class="col-8 offset-3 mb-3">
             <hr>
             <p><b>All Reviews</b></p>
@@ -84,5 +88,15 @@
                 <%}%>
             </div>
         </div>
+        <%}%>
+
+         <div class="col-8 offset-3 mb-3">
+            <hr>
+            <h3>Where you'll be</h3>
+            <div  id="map" ></div>
+         </div>
+   
     </div>
-</body>
+
+    <script src="/js/map.js"></script>
+

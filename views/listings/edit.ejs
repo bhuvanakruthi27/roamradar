@@ -22,13 +22,15 @@
                         Please enter a description.
                     </div>    
                 </div>
-                
+
+                <div class="mb-3">
+                    Original Image <br>
+                    <img src="<%= originalImageUrl %>" class="resized-img">
+                </div>
+
                 <div class="mb-3">
                     <label for="image" class="form-label">Upload new Image</label>
-                    <input type="file" name="listing[image]" class="form-control" >  
-                    <div class="invalid-feedback">
-                          please enter a valid link for image.
-                    </div>      
+                    <input type="file" name="listing[image]" class="form-control" >      
                 </div>
                 
                 <div class="row">
