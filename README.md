@@ -1,10 +1,6 @@
 # RoamRadar – Full Stack Travel Web App
 
-![Status](https://img.shields.io/badge/Status-Backend%20Completed-green)
-
 Roamradar is a full-stack travel application where users can explore destinations, create listings, and leave reviews. It’s built using the MERN stack with a focus on clean backend structure and real-world functionality. The backend is complete, and a React-based frontend is under development.
-
----
 
 ##  Tech Stack
 
@@ -15,8 +11,6 @@ Roamradar is a full-stack travel application where users can explore destination
 - **Templating:** EJS  
 - **Session Management:** express-session, connect-flash
 
----
-
 ##  Features
 
 - User authentication (register/login/logout)  
@@ -25,7 +19,6 @@ Roamradar is a full-stack travel application where users can explore destination
 - Flash messages for user actions  
 - MVC folder structure for scalability
 
----
 
 ##  Getting Started
 
@@ -110,36 +103,6 @@ roamradar/
 ├── README.md
 └── schema.js     # Joi validation schema
 ```
-
-
-##  Screenshots
-
-###  User Signup
-![User Signup](./assets/userSignup.png)
-
-###  User Login
-![User Login](./assets/userLogin.png)
-
-###  All Listings Page
-![All Listings](./assets/allListings.png)
-
-###  Create New Listing
-![Create Listing](./assets/createListing.png)
-
-###  Edit Listing
-![Edit Listing](./assets/editListing.png)
-
-###  Show Listing Details
-![Show Listing](./assets/showListing.png)
-
-
-##  Future Enhancements
-
-- Build the React frontend (in progress)
-- Add user profile dashboard
-- Make it responsive for mobile
-- Add dark/light mode
-- Improve performance and accessibility
 
 ## Developed By
 
