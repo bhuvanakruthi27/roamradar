@@ -74,9 +74,7 @@ const sessionOptions={
 
 
 
-// app.get("/",(req,res)=>{
-//     res.send("app is working");
-// });
+
 app.get('/', (req, res) => {
     res.redirect('/listings');
 });
