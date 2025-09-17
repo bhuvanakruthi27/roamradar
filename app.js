@@ -32,7 +32,13 @@ main()
     });
 
 async function main(){
-    mongoose.connect(dbUrl);
+  await mongoose.connect(process.env.ATLASDB_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    serverSelectionTimeoutMS: 10000,
+    socketTimeoutMS: 45000,
+    maxPoolSize: 10
+    });
 }
 
 app.set("view engine","ejs");
@@ -46,7 +52,7 @@ app.use(express.static(path.join(__dirname,"/public")));
 const store=MongoStore.create({
     mongoUrl:dbUrl,
     crypto:{
-        secret:"mysupersecretcode"
+        secret:process.env.SECRET,
     },
     touchAfter:24 * 3600,
 });
@@ -56,7 +62,7 @@ store.on("error",()=>{
 
 const sessionOptions={
     store,
-    secret:"mysupersecretcode",
+    secret:process.env.SECRET,
     resave:false,
     saveUninitialized:true,
     cookie:{
@@ -71,6 +77,9 @@ const sessionOptions={
 // app.get("/",(req,res)=>{
 //     res.send("app is working");
 // });
+app.get('/', (req, res) => {
+    res.redirect('/listings');
+});
 
 
 app.use(session(sessionOptions));
@@ -89,6 +98,7 @@ app.use((req,res,next)=>{
     res.locals.success=req.flash("success");
     res.locals.error=req.flash("error");
     res.locals.currUser=req.user;
+
     next();
 });
 
