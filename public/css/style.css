@@ -11,8 +11,10 @@ body{
 
 /* navbar*/
 .navbar{
-    height: 5rem;
+    height: auto;
+    min-height: 5rem;
     background-color: white;
+    padding: 0.5rem 1rem;
 }
 .fa-compass{
     color: #fe424d;
@@ -44,11 +46,13 @@ body{
 
 .f-info{
     text-align: center;
-    height: 8rem;
+    height: auto;
+    min-height: 8rem;
+    padding: 1rem 0;
     background-color: #ebebeb;
     display: flex;
     flex-wrap: wrap;
-   justify-content: center;
+    justify-content: center;
 }
 
 /*card*/
@@ -98,8 +102,11 @@ body{
     height: 40vh;
 }
 .btns{
-    display: flex;
-   
+    display: flex;   
+}
+.show-card{
+    padding-left: 0;
+    padding-right: 0;
 }
 
 /* edit image display */
@@ -112,6 +119,136 @@ body{
      height: 400px;
     width: 100%;   /* Full width of parent */
     border-radius: 10px;  
+}
+
+/* ========== RESPONSIVE STYLES ========== */
+
+/* Tablets and below (768px) */
+@media screen and (max-width: 768px) {
+    .navbar {
+        min-height: auto;
+        padding: 0.5rem;
+    }
+
+    .navbar-nav .d-flex {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-nav .search-inp {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .show-img {
+        height: 30vh;
+    }
+
+    #map {
+        height: 300px;
+    }
+
+    .f-info {
+        padding: 1rem 0.5rem;
+    }
+
+    .f-info-links a {
+        margin-right: 0.5rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Mobile phones (576px and below) */
+@media screen and (max-width: 576px) {
+    .container {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    /* Navbar mobile */
+    .navbar {
+        padding: 0.4rem 0.5rem;
+    }
+
+    .navbar-nav.ms-auto.mt-3 {
+        margin-top: 0.5rem !important;
+    }
+
+    .navbar-nav .d-flex {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .navbar-nav .search-inp {
+        width: 100%;
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .navbar-nav .search-btn {
+        width: 100%;
+        padding: 0.4rem 1rem;
+    }
+
+    /* Card grid - single column on mobile */
+    .card-img-top {
+        height: 15rem !important;
+    }
+
+    /* Show page - full width on mobile */
+    .show-img {
+        height: 25vh;
+    }
+
+    .btns {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .btns .btn {
+        width: 100%;
+        margin: 0 !important;
+    }
+
+    .btns form {
+        width: 100%;
+    }
+
+    .btns form .btn {
+        width: 100%;
+        margin: 0 !important;
+    }
+
+    /* Map */
+    #map {
+        height: 250px;
+    }
+
+    /* Footer */
+    .f-info {
+        height: auto;
+        padding: 1rem 0.5rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .f-info-socials i {
+        font-size: 1.1rem;
+    }
+
+    .f-info-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .f-info-links a {
+        font-size: 0.8rem;
+    }
+
+    /* Edit page image */
+    .resized-img {
+        max-width: 100%;
+    }
 }
 
 

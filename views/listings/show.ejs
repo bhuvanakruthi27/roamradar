@@ -4,11 +4,11 @@
         const listing= <%- JSON.stringify(listing) %>; // [lng, lat]
     </script>
     <div class="row mt-3">
-        <div class="col-8 offset-3">
+        <div class="col-12 col-md-8 offset-md-2">
             <h3><%=listing.title %></h3>
         </div>
 
-        <div class="card col-6 offset-3 mt-2 listing-card">
+        <div class="card col-12 col-md-8 offset-md-2 show-card listing-card">
             <img src="<%=listing.image.url%>" class="card-img-top show-img" alt="Listing_image">
             <div class="card-body">          
                     <p class="card-text ">Owned by <i><%=listing.owner.username%></i></p>
@@ -18,14 +18,15 @@
                     <p class="card-text "><%=listing.country%></p>
             </div>
         </div>
+        <br/>
        <% if(currUser && listing.owner._id.equals(currUser._id)) {%>
-            <div class="btns">
-                <a href="/listings/<%=listing._id %>/edit" class="btn btn-dark col-1 offset-3 edit-btn">
+            <div class="btns col-12 col-md-8 offset-md-2">
+                <a href="/listings/<%=listing._id %>/edit" class="btn btn-dark edit-btn">
                     Edit
                 </a>     
             
                 <form method="post" action="/listings/<%=listing._id%>?_method=delete">
-                    <button class="btn btn-dark  offset-5">
+                    <button class="btn btn-dark">
                         Delete
                     </button>     
                 </form>    
@@ -34,7 +35,7 @@
         <% } %>        
 
         <!-- review form -->
-        <div class="col-8 offset-3 mb-3"> 
+        <div class="col-12 col-md-8 offset-md-2 mb-3"> 
             <% if(currUser) {%>
             <hr>
             <h4>Leave a Review</h4>
@@ -62,15 +63,17 @@
                           please add comment for review.
                     </div> 
                 </div>
-                <button class="btn btn-outline-dark ">Submit</button>
+                <button class="btn btn-outline-dark">Submit</button>
             </form>
             
         <% } %>
         </div>
 
         
+
+        
         <%if(listing.reviews.length>0){%>
-        <div class="col-8 offset-3 mb-3">
+        <div class="col-12 col-md-8 offset-md-2 mb-3">
             <hr>
             <p><b>All Reviews</b></p>
             <div class="row">
@@ -90,7 +93,7 @@
         </div>
         <%}%>
 
-         <div class="col-8 offset-3 mb-3">
+         <div class="col-12 col-md-8 offset-md-2 mb-3">
             <hr>
             <h3>Where you'll be</h3>
             <div  id="map" ></div>

@@ -3,8 +3,19 @@
  <style>
     #filters{
         display:flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         align-items: center;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 0.5rem;
+        scrollbar-width: thin;
+    }
+    #filters::-webkit-scrollbar {
+        height: 4px;
+    }
+    #filters::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        border-radius: 4px;
     }
     .filter{
         text-decoration: none;
@@ -13,7 +24,7 @@
         margin-right:2rem;
         margin-top:2rem;
         opacity:0.5;
-
+        flex-shrink: 0;
     }
     .filter:hover{
         opacity: 1;
@@ -30,17 +41,34 @@
         border-radius:1rem ;
         height: 3rem;
         padding: 1rem;
-        margin-left: 3rem;
+        margin-left: 2rem;
         display: flex;
         align-items: center;
+        flex-shrink: 0;
+        white-space: nowrap;
    }
    .no-listings-found{
-         width:500px;
+        width: 100%;
+        max-width: 500px;
         color: #ff0000;
         text-align: center;
         margin: auto;
    }
 
+   @media screen and (max-width: 576px) {
+        .filter {
+            margin-right: 1.2rem;
+        }
+        .tax-toggle {
+            margin-left: 1rem;
+            padding: 0.5rem 0.75rem;
+            font-size: 0.8rem;
+            height: auto;
+        }
+        .tax-toggle .form-check-label {
+            font-size: 0.8rem;
+        }
+   }
  </style>
 
  <div id="filters">
@@ -93,7 +121,7 @@
         </div>
     </div>
  </div>
-<div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
+<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 mt-3">
     <%if(allListings.length==0){%>
         <div class="alert alert-warning no-listings-found my-3">
             <% if(searchItem){ %>         

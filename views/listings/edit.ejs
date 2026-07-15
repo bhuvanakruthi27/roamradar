@@ -1,7 +1,7 @@
 <% layout('layouts/boilerplate') %>
 
     <div class="row mt-3">
-        <div class="col-8 offset-2">
+        <div class="col-12 col-md-8 offset-md-2">
             <h3>Edit Your Listing</h3>
             <form method="post" action="/listings/<%=listing._id%>?_method=put" novalidate class="needs-validation" enctype="multipart/form-data">
                 <div class="mb-3">
@@ -58,6 +58,23 @@
                     <div class="invalid-feedback">
                           please enter a location.
                     </div>  
+                </div>
+
+                <div class="mb-3">
+                    <label for="category" class="form-label">Category</label>
+                    <select class="form-select" name="listing[category]" required>
+                        <option value="">Select a category</option>
+                        <option value="Rooms">Rooms</option>
+                        <option value="Iconic Cities">Iconic Cities</option>
+                        <option value="Mountains">Mountains</option>
+                        <option value="Castles">Castles</option>
+                        <option value="Amazing Pools">Amazing Pools</option>
+                        <option value="Camping">Camping</option>
+                        <option value="Farms">Farms</option>
+                        <option value="Arctic">Arctic</option>
+                        <option value="Domes">Domes</option>
+                        <option value="Boats">Boats</option>
+                    </select>
                 </div>
                 
                 <button class="btn btn-dark edit-btn mt-3 ">Edit</button>       

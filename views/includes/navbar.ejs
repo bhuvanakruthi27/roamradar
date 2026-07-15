@@ -17,6 +17,23 @@
     border-radius:25px ;
     padding:0.5rem 2rem 0.5rem 3rem;
   }
+  @media screen and (max-width: 768px) {
+    .navbar-nav.ms-auto.mt-3 {
+      margin-top: 0.75rem !important;
+    }
+    .navbar-nav .d-flex {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .search-inp {
+      width: 100%;
+      flex: 1;
+      min-width: 0;
+    }
+    .search-btn {
+      white-space: nowrap;
+    }
+  }
 </style>
 
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
