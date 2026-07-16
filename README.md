@@ -103,7 +103,10 @@ roamradar/
 ├── README.md
 └── schema.js     # Joi validation schema
 ```
-
+## Deployement
+```bash
+The application is deployed on render platform and here is the live link : [https://roamradar.onrender.com/(https://roamradar.onrender.com/)
+```
 ## Developed By
 
 [![GitHub](https://img.shields.io/badge/GitHub-bhuvanakruthi27-181717?style=flat&logo=github)](https://github.com/bhuvanakruthi27)
